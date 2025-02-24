@@ -92,7 +92,7 @@
                 echo "<option value='UDP'>UDP</option>";
                 echo "<option value='ICMP'>ICMP</option>";
                 echo "<option value='HTTP'>HTTP</option>";
-                echo "</select><br>";
+                echo "</select><br><br>";
             }  
         }
         ?>
