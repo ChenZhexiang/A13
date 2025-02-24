@@ -11,11 +11,17 @@ $serveis = [
     "TELNET" => ["port" => 23, "protocol" => "TCP"],
     "SAMBA" => ["port" => 445, "protocol" => "TCP"],
     "HTTPS" => ["port" => 443, "protocol" => "TCP"],
-    "MySQL" => ["port" => 3306, "protocol" => "TCP"]
+    "MySQL" => ["port" => 3306, "protocol" => "TCP"],
+    "CUPS" => ["port" => 631, "protocol" => "TCP/UDP"],
+    "NFS" => ["port" => 2049, "protocol" => "TCP/UDP"],
+    "LDAP" => ["port" => 389, "protocol" => "TCP/UDP"],
+    "NTP" => ["port" => 123, "protocol" => "UDP"]
 ];
 
 $nom = $_POST['nom'];
 $email = $_POST['email'];
+$cicle = $_POST['cicle'];
+$curs = $_POST['curs'];
 
 $correctes = 0;
 $incorrectes = 0;
@@ -32,11 +38,14 @@ foreach ($serveis as $servei => $dades) {
 }
 
 $nota = ($correctes * 1) + ($incorrectes * (-1/3));
+$nota = $nota / 1.6;
 $nota = max(0, $nota); // Assegurar que la nota no sigui negativa
 
 echo "<h1>Resultats de l'examen</h1>";
 echo "<p>Nom complet: $nom</p>";
 echo "<p>Correu electrònic: $email</p>";
+echo "<p><strong>Cicle:</strong> $cicle</p>";
+echo "<p><strong>Curs:</strong> $curs</p>";
 echo "<p>Respostes correctes: $correctes</p>";
 echo "<p>Respostes incorrectes: $incorrectes</p>";
 echo "<p>Nota final: $nota / 10</p>";
