@@ -98,5 +98,6 @@
         ?>
         <input type="submit" value="Enviar respostes">
     </form>
+    <p>"hola"</p>
 </body>
 </html>
