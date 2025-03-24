@@ -5,6 +5,7 @@
     <title>Examen de Serveis de Xarxa</title>
 </head>
 <body>
+    <h1>Zhexiang Chen, codi de l'activitat: pj9f5a14 24/03/2025</h1>
     <h1>Examen de Serveis de Xarxa</h1>
     <form action="corrector.php" method="post">
         <label for="nom">Nom complet:</label>
