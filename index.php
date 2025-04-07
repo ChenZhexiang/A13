@@ -99,6 +99,6 @@
         ?>
         <input type="submit" value="Enviar respostes">
     </form>
-    <p>"hola"</p>
+    <p>"hola group06"</p>
 </body>
 </html>
